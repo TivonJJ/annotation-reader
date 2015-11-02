@@ -2,8 +2,10 @@
 annotation-reader for js,supported ES-6 Class
 
 ###example files###
+> test-class.js
 
-```javascript test-class.js
+```javascript
+
 "use strict";
 /**
  * @routerPrefix /wxAPI/;
@@ -34,7 +36,9 @@ class Test {
 module.exports = Test;
 ```
 
-```javascript test-fn.js
+> test-fn.js
+
+```javascript
 /**
  *
  * @annotation annotation for anonymous function export
@@ -58,7 +62,7 @@ someFunction.prototype.c = function(){
 ```javascript
 var reader = require('../lib/annotation-reader');
 console.log(reader.analyzeFileSync('./js/test-class.js'));
-/**
+
 var fs = require('fs');
 var data = fs.readFileSync('./js/test-class.js','utf-8');
 console.log(reader.analyze(data));
